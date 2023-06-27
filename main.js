@@ -29,4 +29,4 @@ myLibrary.forEach(book => {
     console.table(book);
 });
 
-const books = document.querySelector('.book-container');
+const bookshelf = document.querySelector('.bookshelf');

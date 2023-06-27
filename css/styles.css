@@ -1,0 +1,34 @@
+
+.form-content{
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 36px;
+}
+
+.book-field,
+.author-field,
+.status-field{
+    flex: 1;
+    flex-basis: 196px;
+}
+
+.book-field input,
+.author-field input,
+.status-field input{
+    width: 100%;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.row .u-full-width .button-primary{
+    background-color: #f43f5e;
+    border: none;
+}
+
+.row .u-full-width .button-primary:hover {
+    background-color: #c52c46;
+    border: none;
+}

@@ -1,27 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>My book library</title>
+  <meta name="description" content="Library Project for The Odin Project">
+  <meta name="author" content="David Huang">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
   <script src="/main.js" defer></script>
+
 </head>
 <body>
-  <div class="header">
-    <h1>My Library</h1>
-    <div></div>
-  </div>
 
-  <div class="content">
-    <div class="book-container">
-      
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 10%">
+        <h1>My book library</h1>
+        <p style="margin-bottom: 0;">Library project for <a href="https://www.theodinproject.com" target="/">The Odin Project</a>. Created by <a href="https://github.com/hwhuang27" target="/">David Huang</a></p>
+        <p>Github repository can be found <a href="https://github.com/hwhuang27/odin-library" target="/">here</a>.</p>
+      </div>
     </div>
+    
+    <div class="row">
+
+      <form class="form-content" action="/" method="post">
+
+        <div class="book-field">
+          <label for="book">Book</label>
+          <input type="text" id="book" name="book">
+        </div>
+
+        <div class="author-field">
+          <label for="author">Author</label>
+          <input type="text" id="author" name="author">
+        </div>
+
+        <div class="select-field">
+          <label for="book">Status</label>
+          <select name="status" id="status">
+            <option value="read">Read</option>
+            <option value="not-read">Not Read</option>
+          </select>
+        </div>
+
+        <div class="break"></div>
+        <button type="submit" class="button-primary">Submit</button>
+
+      </form>
+    </div>
+
+    <div class="row">
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lord of the Rings</td>
+            <td>J.R.R Tolkien</td>
+            <td><button type="button">Not Read</button></td>
+            <td><button class="button-primary" type="button">Delete</button></td>
+          </tr>
+          <tr>
+            <td>Lord of the Rings</td>
+            <td>J.R.R Tolkien</td>
+            <td><button type="button">Read</button></td>
+            <td><button class="button-primary" type="button">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
   </div>
 
-  <div class="footer">
-    <p>Created by <a href="https://github.com/hwhuang27" target="/">David Huang</a></p>
-  </div>
-
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
