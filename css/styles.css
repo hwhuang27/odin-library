@@ -33,6 +33,10 @@
     border: none;
 }
 
+.status-col{
+    width: 228px;
+}
+
 button{
     border: none;
 }

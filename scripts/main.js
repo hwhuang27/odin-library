@@ -54,8 +54,16 @@ function displayBook(book, index){
         status_btn.classList.add('unread-btn');
     }
     status_btn.addEventListener('click', (e) => {
-        const row = e.target.parentNode.parentNode.getAttribute('data-index');
-
+        const status = e.target;
+        
+        if (status.textContent === 'Read'){
+            status.textContent = 'Not Read';
+        }
+        else{
+            status.textContent = 'Read';
+        }
+        status.classList.toggle('read-btn');
+        status.classList.toggle('unread-btn');
     })
 
     delete_btn.textContent = 'Delete';
