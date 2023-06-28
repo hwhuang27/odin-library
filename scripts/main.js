@@ -1,17 +1,14 @@
 
-// delete entries with button
-// toggle status read / not read
-
 const book_name = document.querySelector('#book');
 const book_author = document.querySelector('#author');
 const book_status = document.querySelector('#status');
 const book_submit = document.querySelector('.submit-btn');
 const table = document.querySelector('.data-table');
 
-book_submit.addEventListener('click', (event) => {
+book_submit.addEventListener('click', (e) => {
     updateLibrary();
     displayLibrary();
-    event.preventDefault();
+    e.preventDefault();
 });
 
 function updateLibrary(){
@@ -30,12 +27,12 @@ function displayLibrary(){
     while(table.hasChildNodes()){
         table.removeChild(table.lastChild);
     }
-    myLibrary.forEach(book => {
-        displayBook(book);
-    });
+    for (let index = 0; index < myLibrary.length; index++) {
+        displayBook(myLibrary[index], index);
+    }
 }
 
-function displayBook(book){
+function displayBook(book, index){
     const row = document.createElement('tr');
     const title_col = document.createElement('td');
     const author_col = document.createElement('td');
@@ -44,8 +41,10 @@ function displayBook(book){
     const status_btn = document.createElement('button');
     const delete_btn = document.createElement('button');
 
+    row.setAttribute('data-index', index);
     title_col.textContent = book.title;
     author_col.textContent = book.author;
+
     if (book.status === 'read') {
         status_btn.textContent = 'Read';
         status_btn.classList.add('read-btn');
@@ -54,8 +53,19 @@ function displayBook(book){
         status_btn.textContent = 'Not Read';
         status_btn.classList.add('unread-btn');
     }
+    status_btn.addEventListener('click', (e) => {
+        const row = e.target.parentNode.parentNode.getAttribute('data-index');
+
+    })
+
     delete_btn.textContent = 'Delete';
     delete_btn.classList.add('button-primary');
+    delete_btn.addEventListener('click', (e) => {
+        const row = e.target.parentNode.parentNode.getAttribute('data-index');
+        myLibrary.splice(index, 1);
+        displayLibrary();
+    });
+
 
     status_col.appendChild(status_btn);
     delete_col.appendChild(delete_btn);
