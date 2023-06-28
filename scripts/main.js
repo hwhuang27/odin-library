@@ -1,6 +1,6 @@
 
-// toggle status read / not read
 // delete entries with button
+// toggle status read / not read
 
 const book_name = document.querySelector('#book');
 const book_author = document.querySelector('#author');

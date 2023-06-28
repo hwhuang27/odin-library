@@ -6,4 +6,4 @@ JavaScript practice project for [The Odin Project](https://www.theodinproject.co
 
 CSS template provided by [Skeleton](http://getskeleton.com/).
 
-Design by [ginnerzapata](https://github.com/ginnerzapata/library-app).
+Design inspired by [ginnerzapata](https://github.com/ginnerzapata/library-app).
