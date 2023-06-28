@@ -32,3 +32,23 @@
     background-color: #c52c46;
     border: none;
 }
+
+button{
+    border: none;
+}
+.read-btn{
+    background-color: #86efac;
+}
+
+.read-btn:hover{
+    background-color: #79d59a;
+}
+
+.unread-btn{
+    background-color: #fecdd3;
+    color: #334155;
+}
+
+.unread-btn:hover {
+    background-color: #e8bbc0;
+}

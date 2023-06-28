@@ -27,7 +27,10 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <script src="/main.js" defer></script>
+  <!-- JavaScript
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="scripts/library.js" defer></script>
+  <script src="scripts/main.js" defer></script>
 
 </head>
 <body>
@@ -61,12 +64,12 @@
           <label for="book">Status</label>
           <select name="status" id="status">
             <option value="read">Read</option>
-            <option value="not-read">Not Read</option>
+            <option value="unread">Not Read</option>
           </select>
         </div>
 
         <div class="break"></div>
-        <button type="submit" class="button-primary">Submit</button>
+        <button type="submit" class="button-primary submit-btn">Submit</button>
 
       </form>
     </div>
@@ -81,19 +84,19 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Lord of the Rings</td>
-            <td>J.R.R Tolkien</td>
-            <td><button type="button">Not Read</button></td>
+        <tbody class="data-table">
+          <!-- <tr data-index="0">
+            <td>Golden Kamuy</td>
+            <td>Satoru Noda</td>
+            <td><button class="read-btn" type="button">Read</button></td>
             <td><button class="button-primary" type="button">Delete</button></td>
           </tr>
-          <tr>
-            <td>Lord of the Rings</td>
-            <td>J.R.R Tolkien</td>
-            <td><button type="button">Read</button></td>
+          <tr data-index="1">
+            <td>Chainsaw Man</td>
+            <td>Tatsuki Fujimoto</td>
+            <td><button class="unread-btn" type="button">Not Read</button></td>
             <td><button class="button-primary" type="button">Delete</button></td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </div>
