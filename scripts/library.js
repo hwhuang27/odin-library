@@ -1,11 +1,14 @@
-let myLibrary = [];
+import Book from './book.js';
 
-function Book(title, author, status) {
-    this.title = title;
-    this.author = author;
-    this.status = status;
+class Library {
+    constructor(){
+        this.library = [];
+    }
+
+    addBook(title, author, status){
+        const newBook = new Book(title, author, status);
+        this.library.push(newBook);
+    }
 }
 
-Book.prototype.info = function () {
-    return `${this.title} by ${this.author}, is ${this.status}`;
-}
+export default Library;
